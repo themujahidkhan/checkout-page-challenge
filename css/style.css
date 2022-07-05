@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 24px 24px;
+  grid-auto-flow: row;
+  margin: 3rem 6rem;
+}
+
+.pageTitle {
+  font-size: 2.25rem;
+  color: #4e5150;
+  font-weight: 600;
+}
+.contactInfo {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #333333;
+  margin: 1rem 0;
+}
+/* All labels */
+label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #4f4f4f;
+}
+
+.shippingInfo {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #333333;
+  margin: 1rem 0;
+}
+
+.product {
+  display: flex;
+  gap: 1rem;
+}
+.productDetails {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .container {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 24px 24px;
+    grid-template-areas:
+      "rhs"
+      "lhs";
+  }
+  .rhs {
+    grid-area: rhs;
+  }
+  .lhs {
+    grid-area: lhs;
+  }
+}
